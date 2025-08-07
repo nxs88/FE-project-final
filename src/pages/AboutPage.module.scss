@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1000px;
+  margin: 0 auto;
+  .card {
+    align-self: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    width: 600px;
+    border-radius: 12px;
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+}

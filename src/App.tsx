@@ -20,6 +20,7 @@ import SearchVacanciePage from './pages/SearchVacanciePage';
 import SingleVacanciePage from './pages/SingleVacanciePage';
 import CittyFilter from './components/CityFilter/CittyFilter';
 import NotFoundPage from './pages/NotFoundPage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
@@ -48,6 +49,7 @@ function App() {
           <Route path="moscow" element={<CittyFilter />} />
           <Route path="petersburg" element={<CittyFilter />} />
         </Route>
+        <Route path="about" element={<AboutPage />} />
         <Route
           path="vacancies/:id"
           element={<SingleVacanciePage vacancies={vacancies} />}
