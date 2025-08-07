@@ -41,7 +41,7 @@ export default function VacancieFilter({ resetPage }: Props) {
 
   return (
     <div className={styles.filter}>
-      <span className={styles.filterImg}></span>
+      <span data-testid="filterImg" className={styles.filterImg}></span>
       <input
         value={search}
         onChange={onChangeHandler}

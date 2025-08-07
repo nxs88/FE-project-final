@@ -48,19 +48,19 @@ afterEach(() => {
 });
 
 describe('VacancieFilter component', () => {
-  // it('Отображает иконку внутри инпута', () => {
-  //   render(
-  //     <Provider store={store}>
-  //       <MantineProvider theme={theme}>
-  //         <MemoryRouter>
-  //           <VacancieFilter resetPage={vi.fn} />;
-  //         </MemoryRouter>
-  //       </MantineProvider>
-  //     </Provider>
-  //   );
-  //   const icon = screen.getByAltText('Lupa');
-  //   expect(icon).toBeInTheDocument();
-  // });
+  it('Отображает иконку внутри инпута', () => {
+    render(
+      <Provider store={store}>
+        <MantineProvider theme={theme}>
+          <MemoryRouter>
+            <VacancieFilter resetPage={vi.fn} />;
+          </MemoryRouter>
+        </MantineProvider>
+      </Provider>
+    );
+    const icon = screen.getByTestId('filterImg');
+    expect(icon).toBeInTheDocument();
+  });
   it('Отображает плейсхолдер', () => {
     render(
       <Provider store={store}>
