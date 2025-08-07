@@ -1,6 +1,6 @@
 import { Navigate, useParams } from 'react-router-dom';
 import type { Vacancie } from '../types/CardInfo';
-import VacancieCard from '../modules/CardList/VacancieCard';
+import VacancieCard from '../components/VacancieCard/VacancieCard';
 import styles from './SingleVacanciePage.module.scss';
 
 type SingleVacanciePageProps = {

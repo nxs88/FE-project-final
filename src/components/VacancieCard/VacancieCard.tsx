@@ -1,7 +1,8 @@
 import { Card, Button } from '@mantine/core';
 import styles from './VacancieCard.module.scss';
 import type { Vacancie } from '../../types/CardInfo';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { renderSalary } from '../../utils/renderSalary';
 
 type CardProps = {
   vacancie: Vacancie;
@@ -11,20 +12,14 @@ export default function VacancieCard({
   vacancie,
   isSinglePage = false,
 }: CardProps) {
+  const navigate = useNavigate();
+
   return (
     <Card className={styles.card}>
       <h2 className={styles.cardName}>{vacancie.name}</h2>
       <div className={styles.cardInfo}>
         <p className={styles.cardSalary}>
-          {vacancie.salary_range
-            ? [
-                vacancie.salary_range.from &&
-                  `от ${vacancie.salary_range.from}`,
-                vacancie.salary_range.to && `до ${vacancie.salary_range.to}`,
-              ]
-                .filter(Boolean)
-                .join(' ') + ` ${vacancie.salary_range.currency}`
-            : 'Зарплата не указана'}
+          {renderSalary(vacancie.salary_range)}
         </p>
         <p className={styles.cardExp}>Опыт: {vacancie.experience.name}</p>
       </div>
@@ -37,18 +32,22 @@ export default function VacancieCard({
       <p className={styles.cardArea}>{vacancie.area.name}</p>
       <div className={styles.cardBtns}>
         {!isSinglePage && (
-          <Button className={styles.detailsBtn}>
-            <Link to={vacancie.id.toString()}>Смотреть вакансию</Link>
+          <Button
+            className={styles.detailsBtn}
+            onClick={() => navigate(`/vacancies/${vacancie.id.toString()}`)}
+          >
+            Смотреть вакансию
           </Button>
         )}
         <Button
           className={`${styles.feedbackBtn} ${
             isSinglePage ? styles.btnSinglePage : ''
           }`}
+          onClick={() => {
+            window.location.href = vacancie.apply_alternate_url;
+          }}
         >
-          <a href={vacancie.apply_alternate_url}>
-            {isSinglePage ? 'Откликнуться на hh.ru' : 'Откликнуться'}
-          </a>
+          {isSinglePage ? 'Откликнуться на hh.ru' : 'Откликнуться'}
         </Button>
       </div>
     </Card>

@@ -1,6 +1,6 @@
 import styles from './CardList.module.scss';
-import VacancieCard from './VacancieCard';
-import CittyFilter from '../Filters/CittyFilter';
+import VacancieCard from '../../components/VacancieCard/VacancieCard';
+import CittyFilter from '../../components/CityFilter/CittyFilter';
 import type { Vacancie } from '../../types/CardInfo';
 import { Pagination } from '@mantine/core';
 

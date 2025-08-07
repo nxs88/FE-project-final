@@ -16,15 +16,13 @@ export default function Header() {
       </div>
 
       <div className={styles.headerPages}>
-        <p className={styles.vacanciesPage}>Вакансии FE</p>
-        <p className={styles.aboutPage}>
-          <img
-            className={styles.aboutImg}
-            src={`${import.meta.env.BASE_URL}assets/images/user-circle.png`}
-            alt="UserLogo"
-          />
-          Обо мне
-        </p>
+        <div className={styles.vacanciesPage}>
+          <span className={styles.vacanciesPageText}>Вакансии FE</span>
+        </div>
+        <div className={styles.aboutPage}>
+          <span data-testid="aboutImg" className={styles.aboutImg}></span>
+          <span className={styles.aboutText}>Обо мне</span>
+        </div>
       </div>
     </header>
   );

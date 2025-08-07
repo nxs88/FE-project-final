@@ -1,12 +1,18 @@
 body {
   background-color: #f6f6f7;
 }
-
+.devider {
+  width: 100%;
+  border: 1px solid rgba(195, 195, 202, 0.2);
+  position: absolute;
+  top: 210px;
+}
 .container {
   width: 1000px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 370px 1fr;
+  row-gap: 30px;
   .info {
     h2 {
       font-weight: 700;

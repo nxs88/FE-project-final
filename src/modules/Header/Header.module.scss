@@ -5,6 +5,7 @@
   padding: 15px 20px;
   background-color: #fff;
   margin-bottom: 40px;
+  box-shadow: 0px 2px 22.5px 0px rgba(28, 29, 31, 0.05);
   .headerInfo {
     display: flex;
     align-items: center;
@@ -20,15 +21,35 @@
     display: flex;
     align-items: center;
     .vacanciesPage {
+      display: flex;
+      align-items: center;
       margin-right: 40px;
       color: rgba(15, 15, 16, 0.5);
+
+      .vacanciesPageText {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.5;
+      }
     }
     .aboutPage {
       color: rgba(15, 15, 16, 0.5);
-    }
-    .aboutImg {
-      vertical-align: text-bottom;
-      margin-right: 10px;
+      display: flex;
+      align-items: center;
+
+      .aboutImg {
+        width: 24px;
+        height: 24px;
+        background-image: url('/assets/images/user-circle.png');
+        background-repeat: no-repeat;
+        margin-right: 5px;
+        margin-top: 4px;
+      }
+      .aboutText {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.5;
+      }
     }
   }
 }

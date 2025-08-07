@@ -18,7 +18,7 @@ import { selectCity, selectSkills } from './Redux/slices/filtersSlice';
 import MainLayout from './layouts/MainLayout';
 import SearchVacanciePage from './pages/SearchVacanciePage';
 import SingleVacanciePage from './pages/SingleVacanciePage';
-import CittyFilter from './modules/Filters/CittyFilter';
+import CittyFilter from './components/CityFilter/CittyFilter';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {

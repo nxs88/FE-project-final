@@ -1,5 +1,5 @@
-import VacancieFilter from '../modules/Filters/VacancieFilter';
-import TagsFilter from '../modules/Filters/TagsFilter';
+import VacancieFilter from '../components/VacancieFilter/VacancieFilter';
+import TagsFilter from '../components/TagsFilter/TagsFilter';
 import CardList from '../modules/CardList/CardList';
 import type { Vacancie } from '../types/CardInfo';
 
@@ -18,9 +18,10 @@ export default function SearchVacanciePage({
 }: SearchVacanciePageProps) {
   return (
     <>
+      <div className="devider"></div>
       <div className="container">
         <div className="info">
-          <h2>Список вакансий </h2>
+          <h1>Список вакансий </h1>
           <p>по профессии Frontend-разработчик</p>
         </div>
         <VacancieFilter resetPage={() => pageChange(1)} />

@@ -41,11 +41,7 @@ export default function VacancieFilter({ resetPage }: Props) {
 
   return (
     <div className={styles.filter}>
-      <img
-        className={styles.filterImg}
-        src={`${import.meta.env.BASE_URL}assets/images/Vector.png`}
-        alt="Lupa" //  =))
-      />
+      <span className={styles.filterImg}></span>
       <input
         value={search}
         onChange={onChangeHandler}
