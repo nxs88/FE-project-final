@@ -5,7 +5,7 @@ import { ghPages } from 'vite-plugin-gh-pages';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/FE-project-tabs/',
+  base: '/FE-project-final/',
   plugins: [react(), ghPages()],
   test: {
     setupFiles: ['./setupTests.ts'],

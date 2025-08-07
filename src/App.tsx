@@ -57,7 +57,7 @@ function App() {
       </Route>
     ),
     {
-      basename: '/FE-project-tabs',
+      basename: '/FE-project-final',
     }
   );
 
