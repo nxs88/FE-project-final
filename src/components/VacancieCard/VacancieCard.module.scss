@@ -50,17 +50,22 @@ p {
     margin-top: 15px;
   }
   .detailsBtn {
-    width: fit-content;
     background-color: #0f0f0f;
     font-weight: 400;
     font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
   }
   .feedbackBtn {
-    width: fit-content;
     background-color: rgba(15, 15, 15, 0.1);
     font-weight: 400;
     font-size: 14px;
     color: #0f0f10;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 5px;
   }
   .btnSinglePage {
     width: fit-content;

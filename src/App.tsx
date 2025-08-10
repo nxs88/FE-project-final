@@ -31,6 +31,18 @@ function App() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
+  useEffect(() => {
+    const load = async () => {
+      const action = await dispatch(
+        fetchVacancies({ search: '', city, skills, page })
+      );
+      const { totalPages } = action.payload as { totalPages: number };
+      setTotalPages(totalPages);
+    };
+
+    load();
+  }, [dispatch, city, skills, page]);
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
@@ -62,18 +74,6 @@ function App() {
       basename: '/FE-project-final',
     }
   );
-
-  useEffect(() => {
-    const load = async () => {
-      const action = await dispatch(
-        fetchVacancies({ search: '', city, skills, page })
-      );
-      const { totalPages } = action.payload as { totalPages: number };
-      setTotalPages(totalPages);
-    };
-
-    load();
-  }, [dispatch, city, skills, page]);
 
   return (
     <MantineProvider theme={theme}>

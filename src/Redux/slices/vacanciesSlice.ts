@@ -23,6 +23,7 @@ export const fetchVacancies = createAsyncThunk<
   FetchVacanciesParams
 >('vacancies/fetchVacancies', async ({ search, city, skills, page }) => {
   const params = new URLSearchParams();
+
   if (search) {
     params.append('search_field', 'name');
     params.append('search_field', 'company_name');
